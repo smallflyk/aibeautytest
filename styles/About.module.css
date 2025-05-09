@@ -1,0 +1,266 @@
+.container {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  color: #333;
+}
+
+.main {
+  width: 100%;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 6rem 8% 4rem;
+  background: linear-gradient(to right, #f9f9ff, #eef1ff);
+}
+
+.title {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(to right, #5c6cff, #6b46e5);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 800;
+}
+
+.description {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* About Section */
+.aboutSection {
+  display: flex;
+  align-items: center;
+  padding: 6rem 8%;
+  flex-wrap: wrap;
+}
+
+.aboutContent {
+  flex: 1;
+  min-width: 300px;
+  padding-right: 3rem;
+}
+
+.aboutContent h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.aboutContent p {
+  margin-bottom: 1.5rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.aboutImage {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.aboutImage img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Technology Section */
+.technologySection {
+  padding: 6rem 8%;
+  background-color: #f9f9ff;
+  text-align: center;
+}
+
+.technologySection h2 {
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+  color: #333;
+}
+
+.technologyGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.technologyItem {
+  padding: 2rem;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  transition: transform 0.3s;
+}
+
+.technologyItem:hover {
+  transform: translateY(-5px);
+}
+
+.technologyItem h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #6b46e5;
+}
+
+.technologyItem p {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Science Section */
+.scienceSection {
+  display: flex;
+  align-items: center;
+  padding: 6rem 8%;
+  flex-wrap: wrap;
+}
+
+.scienceContent {
+  flex: 1;
+  min-width: 300px;
+  order: 2;
+  padding-left: 3rem;
+}
+
+.scienceContent h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.scienceContent p {
+  margin-bottom: 1.5rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.scienceList {
+  margin-bottom: 1.5rem;
+  color: #555;
+  line-height: 1.6;
+  padding-left: 1.5rem;
+}
+
+.scienceList li {
+  margin-bottom: 0.8rem;
+}
+
+.scienceImage {
+  flex: 1;
+  min-width: 300px;
+  order: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.scienceImage img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Privacy Section */
+.privacySection {
+  padding: 6rem 8%;
+  text-align: center;
+  background-color: #f9f9ff;
+}
+
+.privacySection h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.privacySection p {
+  max-width: 800px;
+  margin: 0 auto 1.5rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Team Section */
+.teamSection {
+  padding: 6rem 8%;
+  text-align: center;
+}
+
+.teamSection h2 {
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+  color: #333;
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.teamMember {
+  text-align: center;
+}
+
+.memberPhoto {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 1.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.memberPhoto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.teamMember h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.memberTitle {
+  color: #6b46e5;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.memberBio {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .aboutSection, .scienceSection {
+    flex-direction: column;
+  }
+  
+  .aboutContent, .scienceContent {
+    padding: 0;
+    margin-bottom: 3rem;
+  }
+  
+  .scienceContent {
+    order: 1;
+  }
+  
+  .scienceImage {
+    order: 2;
+  }
+} 
