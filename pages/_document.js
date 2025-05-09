@@ -25,6 +25,19 @@ class MyDocument extends Document {
           <meta property="twitter:title" content="AI Beauty Test | Discover Your Beauty Score with Advanced AI" />
           <meta property="twitter:description" content="Upload your selfie for an instant AI beauty test. Our advanced AI analyzes facial symmetry, golden ratio, and skin quality to provide a detailed beauty score." />
           <meta property="twitter:image" content="/images/og-image.jpg" />
+          
+          {/* Google Analytics */}
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-NNZW6DE6XL"></script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-NNZW6DE6XL');
+              `,
+            }}
+          />
         </Head>
         <body>
           <Main />
