@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useState } from 'react';
 import styles from '../styles/Home.module.css';
+import CanonicalUrl from '../components/CanonicalUrl';
 
 export default function Home() {
   const [file, setFile] = useState(null);
@@ -59,6 +60,7 @@ export default function Home() {
         <meta name="keywords" content="AI beauty test, beauty score, facial analysis, beauty analyzer, AI facial recognition, beauty calculator" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <CanonicalUrl />
 
       <main className={styles.main}>
         <section className={styles.hero}>
@@ -247,25 +249,25 @@ export default function Home() {
           <div className={styles.footerColumn}>
             <h3>Quick Links</h3>
             <ul>
-              <li><Link href="/">Home</Link></li>
-              <li><Link href="/about">About</Link></li>
-              <li><Link href="/faq">FAQ</Link></li>
-              <li><Link href="/blog">Beauty Blog</Link></li>
+              <li><Link href="/"><a title="首页 - AI Beauty Test">Home</a></Link></li>
+              <li><Link href="/about"><a title="关于我们 - AI Beauty Test">About</a></Link></li>
+              <li><Link href="/faq"><a title="常见问题 - AI Beauty Test">FAQ</a></Link></li>
+              <li><Link href="/blog"><a title="美容博客 - AI Beauty Test">Beauty Blog</a></Link></li>
             </ul>
           </div>
           <div className={styles.footerColumn}>
             <h3>Legal</h3>
             <ul>
-              <li><Link href="/privacy">Privacy Policy</Link></li>
-              <li><Link href="/terms">Terms of Service</Link></li>
+              <li><Link href="/privacy"><a title="隐私政策 - AI Beauty Test">Privacy Policy</a></Link></li>
+              <li><Link href="/terms"><a title="服务条款 - AI Beauty Test">Terms of Service</a></Link></li>
             </ul>
           </div>
           <div className={styles.footerColumn}>
             <h3>Connect</h3>
             <div className={styles.socialLinks}>
-              <a href="#" aria-label="Facebook"><span>Facebook</span></a>
-              <a href="#" aria-label="Twitter"><span>Twitter</span></a>
-              <a href="#" aria-label="Instagram"><span>Instagram</span></a>
+              <a href="https://www.facebook.com" title="在Facebook上关注我们" aria-label="Facebook"><span>Facebook</span></a>
+              <a href="https://www.twitter.com" title="在Twitter上关注我们" aria-label="Twitter"><span>Twitter</span></a>
+              <a href="https://www.instagram.com" title="在Instagram上关注我们" aria-label="Instagram"><span>Instagram</span></a>
             </div>
           </div>
         </div>

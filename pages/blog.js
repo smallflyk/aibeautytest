@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import styles from '../styles/Blog.module.css';
+import CanonicalUrl from '../components/CanonicalUrl';
 
 export default function Blog() {
   const blogPosts = [
@@ -66,6 +67,7 @@ export default function Blog() {
         <title>Beauty Blog | AI Beauty Test Insights and Tips</title>
         <meta name="description" content="Explore our beauty blog for insights on AI beauty analysis, tips for improving your beauty score, and trends in beauty technology." />
       </Head>
+      <CanonicalUrl />
 
       <main className={styles.main}>
         <section className={styles.hero}>

@@ -8,7 +8,7 @@ export default function Layout({ children }) {
       <header className={styles.header}>
         <div className={styles.logo}>
           <Link href="/">
-            <a>
+            <a title="AI Beauty Test - 发现你的美丽分数">
               <span className={styles.logoText}>AI Beauty Test</span>
             </a>
           </Link>
@@ -17,29 +17,29 @@ export default function Layout({ children }) {
           <ul className={styles.navList}>
             <li className={styles.navItem}>
               <Link href="/">
-                <a>Home</a>
+                <a title="首页 - AI Beauty Test">Home</a>
               </Link>
             </li>
             <li className={styles.navItem}>
               <Link href="/about">
-                <a>About</a>
+                <a title="关于我们 - AI Beauty Test">About</a>
               </Link>
             </li>
             <li className={styles.navItem}>
               <Link href="/faq">
-                <a>FAQ</a>
+                <a title="常见问题 - AI Beauty Test">FAQ</a>
               </Link>
             </li>
             <li className={styles.navItem}>
               <Link href="/blog">
-                <a>Blog</a>
+                <a title="美容博客 - AI Beauty Test">Blog</a>
               </Link>
             </li>
           </ul>
         </nav>
         <div className={styles.ctaContainer}>
           <Link href="/#upload-section">
-            <a className={styles.ctaButton}>Try Now</a>
+            <a className={styles.ctaButton} title="立即开始你的AI美颜测试">Try Now</a>
           </Link>
         </div>
       </header>

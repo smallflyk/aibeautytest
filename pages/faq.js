@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import { useState } from 'react';
 import styles from '../styles/FAQ.module.css';
+import CanonicalUrl from '../components/CanonicalUrl';
 
 export default function FAQ() {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -58,6 +59,7 @@ export default function FAQ() {
         <title>Frequently Asked Questions | AI Beauty Test</title>
         <meta name="description" content="Find answers to common questions about our AI beauty test. Learn how our beauty score works, how we protect your privacy, and get tips for accurate results." />
       </Head>
+      <CanonicalUrl />
 
       <main className={styles.main}>
         <section className={styles.hero}>

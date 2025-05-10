@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import styles from '../styles/Results.module.css';
+import CanonicalUrl from '../components/CanonicalUrl';
 
 export default function Results() {
   const [score, setScore] = useState(null);
@@ -36,6 +37,7 @@ export default function Results() {
         <meta name="robots" content="noindex" /> {/* Don't index dynamic results pages */}
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <CanonicalUrl />
 
       <main className={styles.main}>
         <section className={styles.resultsHeader}>
@@ -204,15 +206,15 @@ export default function Results() {
             <h3>Share Your Results</h3>
             <p>Let your friends know about your AI beauty test results!</p>
             <div className={styles.shareButtons}>
-              <button className={`${styles.shareButton} ${styles.facebook}`}>Facebook</button>
-              <button className={`${styles.shareButton} ${styles.twitter}`}>Twitter</button>
-              <button className={`${styles.shareButton} ${styles.instagram}`}>Instagram</button>
+              <button className={`${styles.shareButton} ${styles.facebook}`} title="在Facebook上分享你的结果">Facebook</button>
+              <button className={`${styles.shareButton} ${styles.twitter}`} title="在Twitter上分享你的结果">Twitter</button>
+              <button className={`${styles.shareButton} ${styles.instagram}`} title="在Instagram上分享你的结果">Instagram</button>
             </div>
           </div>
           
           <div className={styles.tryAgainSection}>
             <Link href="/">
-              <a className={styles.tryAgainButton}>Try Another AI Beauty Test</a>
+              <a className={styles.tryAgainButton} title="再次进行AI美颜测试">Try Another AI Beauty Test</a>
             </Link>
           </div>
         </section>
@@ -224,21 +226,21 @@ export default function Results() {
               <div className={styles.toolIcon}>👤</div>
               <h3>Age Prediction</h3>
               <p>Discover how old you look with our AI age estimation technology.</p>
-              <button className={styles.toolButton}>Coming Soon</button>
+              <button className={styles.toolButton} title="即将推出AI年龄预测功能">Coming Soon</button>
             </div>
             
             <div className={styles.toolCard}>
               <div className={styles.toolIcon}>✨</div>
               <h3>Celebrity Look-Alike</h3>
               <p>Find out which celebrities share your facial features.</p>
-              <button className={styles.toolButton}>Coming Soon</button>
+              <button className={styles.toolButton} title="即将推出名人相似度分析功能">Coming Soon</button>
             </div>
             
             <div className={styles.toolCard}>
               <div className={styles.toolIcon}>💇</div>
               <h3>Hairstyle Matcher</h3>
               <p>Get AI-recommended hairstyles that suit your face shape.</p>
-              <button className={styles.toolButton}>Coming Soon</button>
+              <button className={styles.toolButton} title="即将推出AI发型匹配功能">Coming Soon</button>
             </div>
           </div>
         </section>
@@ -248,10 +250,10 @@ export default function Results() {
         <div className={styles.footerContent}>
           <p>© {new Date().getFullYear()} AI Beauty Test. All rights reserved.</p>
           <div className={styles.footerLinks}>
-            <Link href="/privacy">Privacy Policy</Link>
-            <Link href="/terms">Terms of Service</Link>
-            <Link href="/faq">FAQ</Link>
-            <Link href="/contact">Contact Us</Link>
+            <Link href="/privacy"><a title="隐私政策 - AI Beauty Test">Privacy Policy</a></Link>
+            <Link href="/terms"><a title="服务条款 - AI Beauty Test">Terms of Service</a></Link>
+            <Link href="/faq"><a title="常见问题 - AI Beauty Test">FAQ</a></Link>
+            <Link href="/contact"><a title="联系我们 - AI Beauty Test">Contact Us</a></Link>
           </div>
         </div>
       </footer>
