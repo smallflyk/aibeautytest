@@ -3,7 +3,6 @@ import Link from 'next/link';
 import styles from '../styles/Blog.module.css';
 import CanonicalUrl from '../components/CanonicalUrl';
 import Breadcrumbs from '../components/Breadcrumbs';
-import LazyImage from '../components/LazyImage';
 
 export default function Blog() {
   const blogPosts = [
@@ -88,12 +87,21 @@ export default function Blog() {
             {blogPosts.map((post) => (
               <div key={post.id} className={styles.blogCard}>
                 <div className={styles.blogImage}>
-                  <LazyImage 
-                    src={post.imageUrl} 
-                    alt={post.title} 
-                    width={400} 
-                    height={225}
-                  />
+                  <div 
+                    className={styles.blogImagePlaceholder}
+                    style={{
+                      backgroundColor: '#f0f0f0',
+                      width: '100%',
+                      height: '225px', 
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      color: '#888',
+                      fontSize: '14px'
+                    }}
+                  >
+                    {post.title}
+                  </div>
                   <div className={styles.blogCategory}>{post.category}</div>
                 </div>
                 <div className={styles.blogContent}>
