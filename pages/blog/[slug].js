@@ -89,14 +89,33 @@ export default function BlogPost() {
     
     // 如果太短，添加额外信息
     if (currentLength < 140) {
-      const additionalInfo = ` Learn how AI technology analyzes facial features according to beauty principles and golden ratio. Discover insights about ${post.category.toLowerCase()} in AI beauty analysis and personalized recommendations.`;
-      // 截取合适长度使总长度在140-160之间
-      const neededLength = Math.min(additionalInfo.length, 160 - currentLength);
-      baseDesc += additionalInfo.substring(0, neededLength);
+      const additionalInfo = ` Discover AI beauty analysis insights and ${post.category.toLowerCase()} tips to enhance your facial features. Learn about golden ratio and symmetry in beauty assessment.`;
+      // 计算需要添加的字符数，确保总长度不超过160
+      const availableSpace = 160 - currentLength;
+      // 如果有足够空间添加全部additionalInfo，则添加；否则截取部分
+      if (availableSpace >= additionalInfo.length) {
+        baseDesc += additionalInfo;
+      } else {
+        // 找到最后一个完整单词的位置，避免单词被截断
+        const truncatedInfo = additionalInfo.substring(0, availableSpace);
+        const lastSpaceIndex = truncatedInfo.lastIndexOf(' ');
+        if (lastSpaceIndex !== -1) {
+          baseDesc += truncatedInfo.substring(0, lastSpaceIndex);
+        } else {
+          baseDesc += truncatedInfo;
+        }
+      }
     } 
-    // 如果太长，截断到160字符
+    // 如果太长，智能截断到适当长度
     else if (currentLength > 160) {
-      baseDesc = baseDesc.substring(0, 157) + "...";
+      // 找到最后一个完整单词的位置，避免单词被截断
+      const truncatedDesc = baseDesc.substring(0, 157);
+      const lastSpaceIndex = truncatedDesc.lastIndexOf(' ');
+      if (lastSpaceIndex !== -1 && lastSpaceIndex > 140) {
+        baseDesc = baseDesc.substring(0, lastSpaceIndex) + "...";
+      } else {
+        baseDesc = truncatedDesc + "...";
+      }
     }
     
     return baseDesc;
@@ -139,7 +158,7 @@ export default function BlogPost() {
       <Head>
         <title>{post.title} | AI Beauty Test Blog</title>
         <meta name="description" content={optimizedDescription} />
-        <meta name="keywords" content={`AI beauty test, ${post.category.toLowerCase()}, ${post.title.toLowerCase()}`} />
+        <meta name="keywords" content="AI beauty test, beauty score, facial analysis, beauty analyzer, AI facial, beauty calc" />
       </Head>
       <CanonicalUrl />
       <BlogSchema 
