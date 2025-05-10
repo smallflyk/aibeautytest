@@ -66,7 +66,7 @@ export default function Blog() {
     <div className={styles.container}>
       <Head>
         <title>Beauty Blog | AI Beauty Test Insights and Tips</title>
-        <meta name="description" content="Explore our beauty blog for insights on AI beauty analysis, tips for improving your beauty score, and trends in beauty technology." />
+        <meta name="description" content="Discover expert insights on AI beauty analysis, facial symmetry, and golden ratio principles. Learn practical tips to enhance your beauty score and stay updated with the latest beauty technology trends and innovations." />
       </Head>
       <CanonicalUrl />
 
