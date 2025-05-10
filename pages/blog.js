@@ -66,7 +66,7 @@ export default function Blog() {
     <div className={styles.container}>
       <Head>
         <title>Beauty Blog | AI Beauty Test Insights and Tips</title>
-        <meta name="description" content="Explore our beauty blog for AI facial analysis insights, tips to improve your beauty score, and beauty tech trends. Learn how symmetry and golden ratio affect your results." />
+        <meta name="description" content="Explore our beauty blog for AI facial analysis insights and tips to improve your beauty score. Learn how symmetry and golden ratio affect your results." />
         <meta name="keywords" content="AI beauty test, beauty score, facial analysis, beauty analyzer, AI facial, beauty calc" />
       </Head>
       <CanonicalUrl />
