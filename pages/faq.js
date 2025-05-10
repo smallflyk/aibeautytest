@@ -58,6 +58,7 @@ export default function FAQ() {
       <Head>
         <title>Frequently Asked Questions | AI Beauty Test</title>
         <meta name="description" content="Find answers to common questions about our AI beauty test. Learn how our beauty score works, how we protect your privacy, and get tips for accurate results." />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
       <CanonicalUrl />
 
