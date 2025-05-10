@@ -37,7 +37,7 @@ class MyDocument extends Document {
           <meta property="og:title" content="AI Beauty Test | Discover Your Beauty Score with Advanced AI" />
           <meta property="og:description" content="Upload your selfie for an instant AI beauty test. Our advanced AI analyzes facial symmetry, golden ratio, and skin quality to provide a detailed beauty score." />
           <meta property="og:image" content="/images/og-image.jpg" />
-          <meta property="og:url" content="https://www.aibeautytest.art" />
+          <meta property="og:url" content="https://aibeautytest.art" />
           
           {/* Twitter Card */}
           <meta property="twitter:card" content="summary_large_image" />
