@@ -1,12 +1,17 @@
 # AI Beauty Test Robots.txt
-# 最后更新: 2023-11-18
+# 最后更新: 2023-12-15
 
-# 所有搜索引擎
+# 默认规则 - 所有搜索引擎
 User-agent: *
 # 允许访问大部分内容
 Allow: /
+Allow: /blog/
+Allow: /about
+Allow: /faq
+Allow: /privacy
+Allow: /terms
 
-# 禁止爬取的页面和目录
+# 禁止爬取的私有页面和内部目录
 Disallow: /results
 Disallow: /api/
 Disallow: /admin/
@@ -14,13 +19,19 @@ Disallow: /_next/
 Disallow: /*?q=*
 Disallow: /*?source=*
 Disallow: /*?ref=*
+Disallow: /*?utm_*
+Disallow: /*/amp/
+Disallow: /test-results-*
 
 # 图片搜索引擎特定规则
 User-agent: Googlebot-Image
 Allow: /images/
 Allow: /*.jpg$
+Allow: /*.jpeg$
 Allow: /*.png$
 Allow: /*.webp$
+Allow: /*.svg$
+Disallow: /images/private/
 
 # 禁止Archive.org存档网站内容
 User-agent: ia_archiver
@@ -31,4 +42,15 @@ User-agent: *
 Crawl-delay: 1
 
 # 网站地图位置
-Sitemap: https://www.aibeautytest.art/sitemap.xml 
+Sitemap: https://www.aibeautytest.art/sitemap.xml
+
+# 移动适配规则
+User-agent: Googlebot-Mobile
+Allow: /
+
+# 针对特定爬虫的规则
+User-agent: Baiduspider
+Crawl-delay: 2
+
+User-agent: Yandex
+Crawl-delay: 2 
