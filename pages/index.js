@@ -57,7 +57,7 @@ export default function Home() {
       <Head>
         <title>AI Beauty Test | Discover Your Beauty Score with Advanced AI</title>
         <meta name="description" content="Upload your selfie for an instant AI beauty test. Our advanced AI analyzes facial symmetry, golden ratio, and skin quality to provide a detailed beauty score." />
-        <meta name="keywords" content="AI beauty test, beauty score, facial analysis, beauty analyzer, AI facial recognition, beauty calculator" />
+        <meta name="keywords" content="AI beauty test, beauty score, facial analysis, beauty analyzer, AI facial, beauty calc" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <CanonicalUrl />
