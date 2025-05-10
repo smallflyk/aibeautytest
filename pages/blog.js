@@ -78,6 +78,8 @@ export default function Blog() {
         </section>
 
         <section className={styles.blogSection}>
+          <h2>Latest Articles</h2>
+          <h3 className={styles.sectionSubtitle}>Expert Insights on AI Beauty and Analysis</h3>
           <div className={styles.blogGrid}>
             {blogPosts.map((post) => (
               <div key={post.id} className={styles.blogCard}>
@@ -87,10 +89,10 @@ export default function Blog() {
                 </div>
                 <div className={styles.blogContent}>
                   <p className={styles.blogDate}>{post.date}</p>
-                  <h2 className={styles.blogTitle}>{post.title}</h2>
+                  <h3 className={styles.blogTitle}>{post.title}</h3>
                   <p className={styles.blogExcerpt}>{post.excerpt}</p>
                   <Link href={`/blog/${post.slug}`}>
-                    <a className={styles.readMoreLink}>Read More</a>
+                    <a className={styles.readMoreLink} title={`阅读文章：${post.title}`}>Read More</a>
                   </Link>
                 </div>
               </div>
@@ -101,6 +103,7 @@ export default function Blog() {
         <section className={styles.newsletterSection}>
           <div className={styles.newsletterContainer}>
             <h2>Subscribe to Our Newsletter</h2>
+            <h3 className={styles.newsletterSubtitle}>Stay Informed on Beauty Tech Trends</h3>
             <p>Stay updated with the latest in AI beauty technology, tips, and trends.</p>
             <form className={styles.newsletterForm}>
               <input 

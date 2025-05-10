@@ -169,6 +169,7 @@ export default function Home() {
 
         <section className={styles.photoGuidelines}>
           <h2>Photo Guidelines for Accurate Results</h2>
+          <h3 className={styles.guidelinesSubtitle}>Optimize Your Photo for the Best AI Analysis</h3>
           <div className={styles.guidelinesContent}>
             <div className={styles.guidelinesText}>
               <ul>
