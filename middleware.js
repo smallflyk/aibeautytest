@@ -12,7 +12,7 @@ export function middleware(request) {
 
 export const config = {
   matcher: [
-    // 匹配所有页面，但排除API路由，_next目录下文件和结果页面
-    '/((?!api|_next/static|_next/image|results|favicon).*)',
+    // 匹配所有页面，但排除API路由，_next目录下文件，robots.txt和结果页面
+    '/((?!api|_next/static|_next/image|results|favicon|robots.txt).*)',
   ],
 }; 
