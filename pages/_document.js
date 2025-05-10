@@ -28,7 +28,7 @@ class MyDocument extends Document {
           />
           
           {/* SEO Meta Tags */}
-          <meta name="keywords" content="AI beauty test, beauty score, facial analysis, beauty analyzer, AI facial recognition" />
+          <meta name="keywords" content="AI beauty test, beauty score, facial analysis, beauty analyzer, AI recognition" />
           <meta name="author" content="AI Beauty Test" />
           <meta name="robots" content="index, follow" />
           
