@@ -77,6 +77,31 @@ export default function BlogPost() {
   // 查找匹配slug的博客文章
   const post = blogPosts.find(post => post.slug === slug);
   
+  // 格式化文章描述，确保字符数在140-160之间
+  const formatDescription = (post) => {
+    if (!post) return "";
+    
+    // 基础描述：使用摘要
+    let baseDesc = post.excerpt || "";
+    
+    // 计算当前字符数
+    const currentLength = baseDesc.length;
+    
+    // 如果太短，添加额外信息
+    if (currentLength < 140) {
+      const additionalInfo = ` Learn how AI technology analyzes facial features according to beauty principles and golden ratio. Discover insights about ${post.category.toLowerCase()} in AI beauty analysis and personalized recommendations.`;
+      // 截取合适长度使总长度在140-160之间
+      const neededLength = Math.min(additionalInfo.length, 160 - currentLength);
+      baseDesc += additionalInfo.substring(0, neededLength);
+    } 
+    // 如果太长，截断到160字符
+    else if (currentLength > 160) {
+      baseDesc = baseDesc.substring(0, 157) + "...";
+    }
+    
+    return baseDesc;
+  };
+  
   // 如果没有找到文章或页面仍在预渲染中
   if (!post && typeof window !== 'undefined') {
     return (
@@ -106,17 +131,20 @@ export default function BlogPost() {
     return <div>加载中...</div>;
   }
   
+  // 获取格式化后的描述
+  const optimizedDescription = formatDescription(post);
+  
   return (
     <div className={styles.container}>
       <Head>
         <title>{post.title} | AI Beauty Test Blog</title>
-        <meta name="description" content={post.excerpt} />
+        <meta name="description" content={optimizedDescription} />
         <meta name="keywords" content={`AI beauty test, ${post.category.toLowerCase()}, ${post.title.toLowerCase()}`} />
       </Head>
       <CanonicalUrl />
       <BlogSchema 
         title={post.title}
-        description={post.excerpt}
+        description={optimizedDescription}
         slug={post.slug}
         image={post.imageUrl}
         datePublished={post.date}
