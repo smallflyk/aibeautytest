@@ -5,4 +5,4 @@ Allow: /
 Disallow: /results
 
 # 指向网站地图
-Sitemap: https://aibeautytest.art/sitemap.xml 
+Sitemap: https://www.aibeautytest.art/sitemap.xml 

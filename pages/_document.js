@@ -32,6 +32,13 @@ class MyDocument extends Document {
           <meta name="author" content="AI Beauty Test" />
           <meta name="robots" content="index, follow" />
           
+          {/* 搜索引擎验证 */}
+          <meta name="google-site-verification" content="YOUR_GOOGLE_VERIFICATION_CODE" />
+          <meta name="baidu-site-verification" content="YOUR_BAIDU_VERIFICATION_CODE" />
+          <meta name="sogou_site_verification" content="YOUR_SOGOU_VERIFICATION_CODE" />
+          <meta name="yandex-verification" content="YOUR_YANDEX_VERIFICATION_CODE" />
+          <meta name="360-site-verification" content="YOUR_360_VERIFICATION_CODE" />
+          
           {/* Open Graph / Social Media */}
           <meta property="og:type" content="website" />
           <meta property="og:title" content="AI Beauty Test | Discover Your Beauty Score with Advanced AI" />

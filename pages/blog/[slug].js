@@ -3,6 +3,9 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import styles from '../../styles/BlogPost.module.css';
 import CanonicalUrl from '../../components/CanonicalUrl';
+import BlogSchema from '../../components/BlogSchema';
+import LazyImage from '../../components/LazyImage';
+import Breadcrumbs from '../../components/Breadcrumbs';
 
 // 这里模拟博客文章数据，实际项目中应从API或数据库获取
 const blogPosts = [
@@ -112,8 +115,18 @@ export default function BlogPost() {
         <meta name="keywords" content={`AI beauty test, ${post.category.toLowerCase()}, ${post.title.toLowerCase()}`} />
       </Head>
       <CanonicalUrl />
+      <BlogSchema 
+        title={post.title}
+        description={post.excerpt}
+        slug={post.slug}
+        image={post.imageUrl}
+        datePublished={post.date}
+        dateModified={post.date}
+      />
       
       <main className={styles.main}>
+        <Breadcrumbs title={post.title} />
+        
         <article className={styles.article}>
           <div className={styles.articleHeader}>
             <div className={styles.category}>{post.category}</div>
@@ -122,7 +135,13 @@ export default function BlogPost() {
           </div>
           
           <div className={styles.featuredImage}>
-            <img src={post.imageUrl} alt={post.title} />
+            <LazyImage 
+              src={post.imageUrl} 
+              alt={post.title} 
+              width={800} 
+              height={450} 
+              layout="responsive"
+            />
           </div>
           
           <div className={styles.content}>
@@ -160,7 +179,13 @@ export default function BlogPost() {
           <div className={styles.authorBox}>
             <h3>关于作者</h3>
             <div className={styles.authorInfo}>
-              <img src="/images/author.jpg" alt="Author" className={styles.authorImage} />
+              <LazyImage 
+                src="/images/author.jpg" 
+                alt="Author" 
+                width={80} 
+                height={80} 
+                className={styles.authorImage} 
+              />
               <div>
                 <p className={styles.authorName}>AI Beauty Team</p>
                 <p className={styles.authorBio}>我们的团队由AI研究人员和美容行业专家组成，致力于提供最先进的AI美颜分析技术。</p>
