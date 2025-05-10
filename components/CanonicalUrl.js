@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 
 const CanonicalUrl = () => {
   const router = useRouter();
-  const baseUrl = 'https://www.aibeautytest.art';
+  const baseUrl = 'https://aibeautytest.art';
   const canonicalUrl = `${baseUrl}${router.asPath === '/' ? '' : router.asPath}`;
 
   return (
