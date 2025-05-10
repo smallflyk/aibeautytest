@@ -38,6 +38,38 @@
   padding: 4rem 8% 6rem;
 }
 
+.sectionTitle {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-bottom: 3rem;
+  color: #333;
+  position: relative;
+}
+
+.sectionTitle:after {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, #5c6cff, #6b46e5);
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.faqCategory {
+  margin-bottom: 3rem;
+}
+
+.categoryHeading {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #5c6cff;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #eef1ff;
+}
+
 .faqContainer {
   max-width: 800px;
   margin: 0 auto;
@@ -117,7 +149,7 @@
   border-radius: 30% 30% 0 0 / 10%;
 }
 
-.contactSection h2 {
+.contactHeading {
   font-size: 2.2rem;
   margin-bottom: 1rem;
   color: #333;

@@ -91,11 +91,11 @@ export default function FAQ() {
         </section>
 
         <section className={styles.faqSection}>
-          <h2 className={styles.sectionTitle}>Common Questions</h2>
+          <h2 className={styles.sectionTitle}>Explore Our FAQ Categories</h2>
           <div className={styles.faqContainer}>
             {faqs.map((category, categoryIndex) => (
               <div key={categoryIndex} className={styles.faqCategory}>
-                <h2 className={styles.categoryTitle}>{category.category}</h2>
+                <h2 className={styles.categoryHeading}>{category.category}</h2>
                 {category.questions.map((faq, index) => (
                   <div 
                     key={`${categoryIndex}-${index}`}
@@ -121,7 +121,7 @@ export default function FAQ() {
         </section>
 
         <section className={styles.contactSection}>
-          <h2>Still Have Questions?</h2>
+          <h2 className={styles.contactHeading}>Still Have Questions?</h2>
           <p>
             If you couldn't find the answer to your question, feel free to contact us. Our team is here to help!
           </p>
