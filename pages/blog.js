@@ -3,6 +3,7 @@ import Link from 'next/link';
 import styles from '../styles/Blog.module.css';
 import CanonicalUrl from '../components/CanonicalUrl';
 import Breadcrumbs from '../components/Breadcrumbs';
+import Favicon from '../components/Favicon';
 
 export default function Blog() {
   const blogPosts = [
@@ -68,6 +69,7 @@ export default function Blog() {
         <title>Beauty Blog | AI Beauty Test Insights and Tips</title>
         <meta name="description" content="Explore our beauty blog for AI facial analysis insights and tips to improve your beauty score. Learn how symmetry and golden ratio affect your results." />
         <meta name="keywords" content="AI beauty test, beauty score, facial analysis, beauty analyzer, AI facial, beauty calc" />
+        <Favicon />
       </Head>
       <CanonicalUrl />
 

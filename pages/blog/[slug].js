@@ -5,6 +5,7 @@ import styles from '../../styles/BlogPost.module.css';
 import CanonicalUrl from '../../components/CanonicalUrl';
 import BlogSchema from '../../components/BlogSchema';
 import Breadcrumbs from '../../components/Breadcrumbs';
+import Favicon from '../../components/Favicon';
 
 // 这里模拟博客文章数据，实际项目中应从API或数据库获取
 const blogPosts = [
@@ -159,6 +160,7 @@ export default function BlogPost() {
         <title>{post.title} | AI Beauty Test Blog</title>
         <meta name="description" content={optimizedDescription} />
         <meta name="keywords" content="AI beauty test, beauty score, facial analysis, beauty analyzer, AI facial, beauty calc" />
+        <Favicon />
       </Head>
       <CanonicalUrl />
       <BlogSchema 

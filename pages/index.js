@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import styles from '../styles/Home.module.css';
 import CanonicalUrl from '../components/CanonicalUrl';
+import Favicon from '../components/Favicon';
 
 export default function Home() {
   const [file, setFile] = useState(null);
@@ -58,7 +59,7 @@ export default function Home() {
         <title>AI Beauty Test | Discover Your Beauty Score with Advanced AI</title>
         <meta name="description" content="Upload your selfie for an instant AI beauty test. Our advanced AI analyzes facial symmetry, golden ratio, and skin quality to provide a detailed beauty score." />
         <meta name="keywords" content="AI beauty test, beauty score, facial analysis, beauty analyzer, AI facial, beauty calc" />
-        <link rel="icon" href="/favicon.ico" />
+        <Favicon />
       </Head>
       <CanonicalUrl />
 

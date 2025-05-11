@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import styles from '../styles/About.module.css';
 import CanonicalUrl from '../components/CanonicalUrl';
+import Favicon from '../components/Favicon';
 
 export default function About() {
   return (
@@ -8,7 +9,7 @@ export default function About() {
       <Head>
         <title>About AI Beauty Test | The Science Behind Beauty Analysis</title>
         <meta name="description" content="Learn about the AI technology behind our beauty test. Discover how our algorithm analyzes facial features to provide accurate beauty scores." />
-        <link rel="icon" href="/favicon.ico" />
+        <Favicon />
       </Head>
       <CanonicalUrl />
 
